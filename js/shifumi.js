@@ -18,3 +18,24 @@ for (let i = 0; i < 3; i++) {
 
     })
 };
+
+timer = document.getElementById("timer");
+temps = 10;
+
+function a() {
+    if (temps != 0) {
+        let minutes = Math.floor(temps / 60);
+        let secondes = temps % 60;
+        
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        secondes = secondes < 10 ? "0" + secondes : secondes;
+
+
+        timer.textContent = minutes + ":" + secondes;
+        temps--;
+    } else {
+        timer.innerHTML = "<i class='fa-brands fa-discord fa-bounce fa-2xl'></i>";
+    }
+}
+
+setInterval(a, 1000);
