@@ -7,12 +7,12 @@ for (let i = 0; i < 3; i++) {
         document.getElementById("joueur").textContent = "Joueur : " + coupJoueur;
         let alea = Math.floor(Math.random()*3);
         document.getElementById("robot").textContent = "Robot : " + boutons[alea].textContent;
-        let resultat = "Gagné :D";
+        let resultat = "Gagné 😎🤞🤣";
         if (alea == i) {
-            resultat = "Égalité :|"
+            resultat = "Égalité 😐"
         }
         if (alea == (i+1)%3) {
-            resultat = "Perdu D:"
+            resultat = "Perdu 😔"
         }
         document.getElementById("resultat").textContent = "Résultat : " + resultat;
 
